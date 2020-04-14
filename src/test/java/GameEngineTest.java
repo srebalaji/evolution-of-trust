@@ -6,8 +6,8 @@ public class GameEngineTest {
     @Test
     public void checkGamePlay() {
         ScoreBoard scoreBoard = new ScoreBoard();
-        Player player1 = new Player();
-        Player player2 = new Player();
+        Player player1 = new Player(new AlwaysCooperativeBehaviour());
+        Player player2 = new Player(new AlwaysCooperativeBehaviour());
 
         new GameEngine(player1, player2, 1, scoreBoard).play();
 
@@ -18,8 +18,8 @@ public class GameEngineTest {
     @Test
     public void checkGamePlayForCooperativePlayerFiveRounds() {
         ScoreBoard scoreBoard = new ScoreBoard();
-        Player player1 = new Player();
-        Player player2 = new Player();
+        Player player1 = new Player(new AlwaysCooperativeBehaviour());
+        Player player2 = new Player(new AlwaysCooperativeBehaviour());
 
         GameEngine gameEngine = new GameEngine(player1, player2, 5, scoreBoard);
         gameEngine.play();

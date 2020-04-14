@@ -1,6 +1,13 @@
 import javafx.util.Pair;
 
 public class TrustMachine {
+    private Player p1;
+    private Player p2;
+
+    public TrustMachine(Player p1, Player p2) {
+        this.p1 = p1;
+        this.p2 = p2;
+    }
 
     public int[] getScore(Decisions p1Decision, Decisions p2Decision) {
         int[] score = new int[2];
@@ -27,5 +34,9 @@ public class TrustMachine {
         }
 
         return score;
+    }
+
+    public int[] play() {
+       return getScore(p1.getMove(), p2.getMove());
     }
 }

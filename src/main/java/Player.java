@@ -5,7 +5,7 @@ public class Player {
         this.playerBehavior = playerBehavior;
     }
 
-    public Decisions getMove() {
+    public Decisions getMove() throws InvalidDecisionException {
         return playerBehavior.getMove();
     }
 }

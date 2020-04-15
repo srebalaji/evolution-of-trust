@@ -1,3 +1,3 @@
 public interface PlayerBehavior {
-    Decisions getMove();
+    Decisions getMove() throws InvalidDecisionException;
 }

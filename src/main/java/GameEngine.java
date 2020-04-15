@@ -11,12 +11,12 @@ public class GameEngine {
         this.scoreBoard = scoreboard;
     }
 
-    public void play() {
-        for(int i=0; i<rounds; i+=1) {
+    public void play() throws InvalidDecisionException {
+        for (int i = 0; i < rounds; i += 1) {
             int scores[] = TrustMachine.getScore(player1.getMove(), player2.getMove());
             scoreBoard.updateScore(player1, scores[0]);
             scoreBoard.updateScore(player2, scores[1]);
-            System.out.println("Player1: "+ scoreBoard.getScore(player1) + " Player2: " + scoreBoard.getScore(player2));
+            System.out.println("Player1: " + scoreBoard.getScore(player1) + " Player2: " + scoreBoard.getScore(player2));
         }
     }
 }

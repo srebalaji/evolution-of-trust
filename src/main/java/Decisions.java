@@ -16,12 +16,12 @@ public enum Decisions {
         return this.input;
     }
 
-    public static Decisions getDecision (String input) {
-        if(input.equals(COOPERATE.getInput())) {
+    public static Decisions getDecision (String input) throws InvalidDecisionException {
+        if(input.equalsIgnoreCase(COOPERATE.getInput())) {
             return COOPERATE;
-        } else if(input.equals(CHEAT.getInput())) {
+        } else if(input.equalsIgnoreCase(CHEAT.getInput())) {
             return CHEAT;
         }
-        return null;
+        throw new InvalidDecisionException("Invalid Decisions");
     }
 }

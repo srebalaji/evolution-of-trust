@@ -11,8 +11,8 @@ public class GameEngineTest {
 
     @Before
     public void setUp() {
-        scoreBoard= Mockito.mock(ScoreBoard.class);
-        player= Mockito.mock(Player.class);
+        scoreBoard = Mockito.mock(ScoreBoard.class);
+        player = Mockito.mock(Player.class);
     }
 
     @Test
@@ -20,6 +20,7 @@ public class GameEngineTest {
         when(scoreBoard.getScore(player)).thenReturn(DecisionPoints.POINT_GAINED_WITH_COOPERATION.getPoints());
         assertEquals(scoreBoard.getScore(player), DecisionPoints.POINT_GAINED_WITH_COOPERATION.getPoints());
     }
+
     @Test
     public void checkGamePlay() throws InvalidDecisionException {
         ScoreBoard scoreBoard = new ScoreBoard();
@@ -31,7 +32,7 @@ public class GameEngineTest {
         assertEquals(scoreBoard.getScore(player1), DecisionPoints.POINT_GAINED_WITH_COOPERATION.getPoints());
         assertEquals(scoreBoard.getScore(player2), DecisionPoints.POINT_GAINED_WITH_COOPERATION.getPoints());
     }
-    
+
     @Test
     public void checkGamePlayForCooperativePlayerFiveRounds() throws InvalidDecisionException {
         ScoreBoard scoreBoard = new ScoreBoard();
@@ -43,7 +44,7 @@ public class GameEngineTest {
 
         assertEquals(scoreBoard.getScore(player1), DecisionPoints.POINT_GAINED_WITH_COOPERATION.getPoints() * 5);
         assertEquals(scoreBoard.getScore(player2), DecisionPoints.POINT_GAINED_WITH_COOPERATION.getPoints() * 5);
-        
+
     }
 
 }

@@ -24,8 +24,8 @@ public class GameEngineTest {
     @Test
     public void checkGamePlay() throws InvalidDecisionException {
         ScoreBoard scoreBoard = new ScoreBoard();
-        Player player1 = new Player(new AlwaysCooperativeBehaviour());
-        Player player2 = new Player(new AlwaysCooperativeBehaviour());
+        Player player1 = new Player(new AlwaysCooperativeBehaviour(),1);
+        Player player2 = new Player(new AlwaysCooperativeBehaviour(),2);
 
         new GameEngine(player1, player2, 1, scoreBoard).play();
 
@@ -36,8 +36,8 @@ public class GameEngineTest {
     @Test
     public void checkGamePlayForCooperativePlayerFiveRounds() throws InvalidDecisionException {
         ScoreBoard scoreBoard = new ScoreBoard();
-        Player player1 = new Player(new AlwaysCooperativeBehaviour());
-        Player player2 = new Player(new AlwaysCooperativeBehaviour());
+        Player player1 = new Player(new AlwaysCooperativeBehaviour(),1);
+        Player player2 = new Player(new AlwaysCooperativeBehaviour(),2);
 
         GameEngine gameEngine = new GameEngine(player1, player2, 5, scoreBoard);
         gameEngine.play();

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GameEngineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-15T11:05:52" hostname="Sres-MacBook-Pro.local" time="0.72">
-  <properties/>
-  <testcase name="testGameEngine" classname="GameEngineTest" time="0.72"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
